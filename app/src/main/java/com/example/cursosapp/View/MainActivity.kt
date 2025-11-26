@@ -54,17 +54,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun procesarFormulario() {
-        // Capturar datos del formulario
+
         viewModel.nombre = binding.nombre.text.toString()
         viewModel.carnet = binding.carnet.text.toString()
 
-        // Capturar cursos seleccionados
+
         viewModel.cursosSeleccionados.clear()
         if (binding.excel.isChecked) viewModel.cursosSeleccionados.add("Excel")
         if (binding.powerBi.isChecked) viewModel.cursosSeleccionados.add("PowerBI")
         if (binding.pytho.isChecked) viewModel.cursosSeleccionados.add("Python")
 
-        // Capturar nivel seleccionado
+
         viewModel.nivel = when (binding.nivel.checkedRadioButtonId) {
             R.id.basico -> "Basico"
             R.id.intermedio -> "Intermedio"
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             else -> ""
         }
 
-        // Capturar tipo de pago
+
         viewModel.tipoPago = when (binding.tipoPago.checkedRadioButtonId) {
             R.id.efectivo -> "Efectivo"
             R.id.qr -> "QR"
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             else -> ""
         }
 
-        // Generar información (esto actualizará automáticamente la UI a través del LiveData)
+
         viewModel.generarInformacion()
     }
 }
