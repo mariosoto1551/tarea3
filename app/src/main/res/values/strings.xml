@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CursosApp</string>
+    <string name="cursos">Cursos</string>
+    <string name="imagen_educacional">imagen educacional</string>
+    <string name="nombre">Nombre</string>
+    <string name="carnet">Carnet</string>
+</resources>
