@@ -12,7 +12,7 @@ class CursosViewModel : ViewModel() {
     var tipoPago: String = ""
     private var totalCosto: Int = 0
 
-    // LiveData privado (mutable) y público (inmutable)
+
     private val _informacionMostrada = MutableLiveData<String>()
     val informacionMostrada: LiveData<String> = _informacionMostrada
 
@@ -22,12 +22,12 @@ class CursosViewModel : ViewModel() {
     private fun calcularTotal() {
         totalCosto = 0
 
-        // Sumar precios de cursos
+
         if (cursosSeleccionados.contains("Excel")) totalCosto += 50
         if (cursosSeleccionados.contains("PowerBI")) totalCosto += 70
         if (cursosSeleccionados.contains("Python")) totalCosto += 110
 
-        // Sumar costo adicional por nivel
+
         when (nivel) {
             "Intermedio" -> totalCosto += 20
             "Avanzado" -> totalCosto += 50
